@@ -1,0 +1,657 @@
+@font-face {
+    font-family: 'Bebas';
+    src: url(font/BebasNeue-Regular.ttf);
+}
+body {
+    margin: 0;
+    background-color: white;
+    font-family: 'Bebas', sans-serif;
+}
+/* ========== HEADER ========== */
+header {
+    display: flex;
+    align-items: center;            /* Aligne logo + menu sur la même ligne */
+    background-color:rgb(21, 20, 20);
+    padding: 10px 20px;
+}
+/* ========== LOGO À GAUCHE ========== */
+#logo-wrapper {
+    flex: 1;                         /* Prend l'espace à gauche */
+}
+#logo-wrapper a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+#logo {
+    margin-right: 10px;
+    padding: 1px;
+}
+#navtop ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 200px;
+}
+#navtop li {
+    position: relative;
+}
+/* LIENS DU MENU PRINCIPAL */
+#navtop li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+#navtop li a:hover {
+    background-color: rgba(196, 32, 32, 0.1);
+}
+/* SOUS-MENUS (DROPDOWN) */
+#navtop li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #a91a1a;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    z-index: 10;
+}
+#navtop li ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+}
+#navtop li:hover ul {
+    display: block;
+}
+#contact img {
+    width: 6px;
+    height: auto;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+    header {
+       flex-direction: row; /*pas besoin de faure un display flex vu qu'on l'a déjà mis avant */
+    }
+    #home {
+        height: 75px;   
+    }
+    #navtop li {
+        position: relative;
+    }
+    #navtop li ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+   #navtop ul {
+    flex-direction: row;  
+    align-items: center;
+    display: flex;
+    gap: 250px;
+    }
+    #navtop li {
+        position: relative; 
+    }
+    #navtop li ul { 
+        position: absolute;
+        top: 43px;
+        left: 0;
+        background-color: rgb(135, 13, 13);
+        width: 100%
+    }
+    #navtop ul li ul li a{
+        color: white; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #navtop li:hover ul {
+        display: block
+    }
+    #logo {
+        height: 300px;
+        display: flex;
+    }
+    #position {
+        height:30px;
+    }
+    #magasin a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6px;
+      }
+
+
+
+
+
+
+      /*=====Page Acceuil=====*/
+
+      .harley h2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+        
+      }
+      #logo-harley {
+        display: block;
+        margin: auto; 
+        height: 200px;
+        margin-top: 325px;
+      }
+
+      #logo-triumph {
+        display: block;
+        margin: auto; 
+        height: 200px;
+        margin-top: 325px;
+      }
+
+      .podium {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 40px;
+        padding: 60px 20px;
+        background-color: white;
+        overflow: hidden;
+      }
+      
+      .moto {
+        transition: transform 0.3s ease, z-index 0.3s ease;
+        cursor: pointer;
+        max-height: 250px;
+      }
+      
+      .moto.side {
+        transform: scale(0.8);
+        opacity: 0.7;
+      }
+      
+      .moto.center {
+        transform: scale(1);
+        z-index: 2;
+      }
+      
+      .moto:hover {
+        transform: scale(1.1);
+        opacity: 1;
+        z-index: 3;
+      }
+      
+      
+
+
+
+
+
+
+
+
+       /*=====Page Ducati=====*/
+
+      body.ducati {
+        background-color: rgb(91, 22, 22);
+      }
+      
+      body.ducati h1 {
+        color: white;
+      }
+      .ducati-scrambler {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #1a1a1a;
+        color: white; 
+      }
+      .ducati-scrambler img.full-width {
+        width: 500px;
+        height: auto; 
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+      #bouton-return {
+        height: 70px;
+        margin-top: 40px;
+      }
+    #logoDucati {
+        height: 150px;  
+      }
+
+
+
+
+
+
+
+
+      /*=====Page Aprilia=====*/
+
+
+      body.aprilia {
+        background-image: url("img/drapeau-italie.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      
+      body.aprilia h1 {
+        color: white;
+      }
+      .rs-v4{
+        text-align: center;
+        padding: 40px 20px;
+        color: white; 
+      }
+      .rs-v4 img.full-width {
+        width: 500px;
+        height: auto; 
+       
+      }
+      #bouton-return {
+        height: 70px;
+        margin-top: 40px;
+      }
+      a {
+        color: purple;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+    #logo-Aprilia {
+        height: 150px;  
+      }
+
+
+
+
+
+
+      /*=====Page Yamaha=====*/
+
+      body.yamaha {
+        background-image: url("img/drapeau-japonais.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+;
+      }
+      body.yamaha h1 {
+        color: white;
+      }
+      .R1{
+        text-align: center;
+        padding: 40px 20px;
+        color: black; 
+      }
+      .R1 img.full-width {
+        width: 500px;
+        height: auto; 
+      }
+      #bouton-return {
+        height: 70px;
+      }
+      a {
+        color: purple;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+    #logo-yamaha {
+        height: 150px;  
+      }
+
+
+
+
+
+      /*=====Page BMW=====*/
+
+      body.bmw {
+        background-image: url("img/fond-s1000RR.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+;
+      }
+      body.bmw h1 {
+        color: white;
+      }
+      .S1000RR{
+        text-align: center;
+        padding: 40px 20px;
+        color: white; 
+      }
+      .S1000RR img.full-width {
+        width: 500px;
+        height: auto; 
+      }
+      #bouton-return {
+        height: 70px;
+      }
+      a {
+        color: purple;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+    #logo-BMW {
+        height: 150px; 
+        background-color: white; 
+      }
+
+
+
+    /*Page contact*/
+
+    .contact body {
+        background-color: black;
+    }
+    
+    .contact header {
+        background-color: white;
+        color: black;      
+        display: block;
+        text-align: center;
+    }
+        
+    .contact footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+    #logo-insta {
+        margin-right: 10px;
+    }
+    #logo-mail {
+        margin-right: 10px;
+    }
+    
+    .contact p {
+        font-size: 2rem;
+    }
+    .contact header {
+        font-size: 2.5rem;
+
+    }
+    #logo-return {
+        display: inline-block;
+        height: 300px;
+    }
+    #logo-return img {
+        display: block;
+        height: 30px;
+
+    }
+
+
+    /*Las vegas page*/
+
+    .vegas {
+        background-color: black;
+    }
+    .vegas header {
+        background-color: white;
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+    }
+    #photo-vegas {
+        height: 750px;
+        border-radius: 10px;
+        margin-top: 10px;
+
+    }
+    .magasin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+      }
+      .magasin p {
+        color: white;
+        font-size: 1.8rem;
+        max-width: 500px;
+        line-height: 2;
+      }
+
+      .retour {
+        text-align: center;
+      }
+      #bouton-return {
+        height: 200px;
+      }
+
+
+    /*Magasin Mons*/
+
+    .contact body {
+        background-color: black;
+    }
+    
+    .contact header {
+        background-color: white;
+        color: black;      
+        display: block;
+        text-align: center;
+    }
+        
+    .contact footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+    #logo-insta {
+        margin-right: 10px;
+    }
+    #logo-mail {
+        margin-right: 10px;
+    }
+    
+    .contact p {
+        font-size: 2rem;
+    }
+    .contact header {
+        font-size: 2.5rem;
+
+    }
+    #logo-return {
+        display: inline-block;
+        height: 300px;
+    }
+    #logo-return img {
+        display: block;
+        height: 30px;
+
+    }
+
+
+    /*Las vegas page*/
+
+    .mons {
+        background-color: black;
+    }
+    .mons header {
+        background-color: white;
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+    }
+    #photo-mons {
+        height: 750px;
+        width: 800px;
+        border-radius: 10px;
+        margin-top: 10px;
+
+    }
+    .magasin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+      }
+      .magasin p {
+        color: white;
+        font-size: 1.8rem;
+        max-width: 500px;
+        line-height: 2;
+      }
+
+      .retour {
+        text-align: center;
+      }
+      #bouton-return {
+        height: 200px;
+      }
+
+      /*Magasin Bx*/
+
+      .bx {
+        background-color: black;
+    }
+    .bx header {
+        background-color: white;
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+    }
+    #photo-bx {
+        height: 750px;
+        width: 800px;
+        border-radius: 10px;
+        margin-top: 10px;
+
+    }
+    .magasin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+      }
+      .magasin p {
+        color: white;
+        font-size: 1.8rem;
+        max-width: 500px;
+        line-height: 2;
+      }
+
+      .retour {
+        text-align: center;
+      }
+      #bouton-return {
+        height: 200px;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      
+        #navtop ul {
+          flex-direction: column;
+          gap: 20px;
+        }
+      
+        .podium {
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px;
+        }
+      
+        .moto {
+          max-height: 180px;
+        }
+      
+        .magasin {
+          flex-direction: column;
+          text-align: center;
+        }
+      
+        #photo-vegas,
+        #photo-mons,
+        #photo-bx {
+          width: 90%;
+          height: auto;
+        }
+      
+        .magasin p {
+          font-size: 1.3rem;
+          padding: 0 10px;
+        }
+      
+        #logo,
+        #logo-harley,
+        #logo-triumph,
+        #logo-yamaha,
+        #logo-BMW,
+        #logo-Aprilia,
+        #logoDucati {
+          height: 120px;
+        }
+      
+        #bouton-return {
+          height: 100px;
+        }
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+    
+
+
+        
+        
+    
+
+
+
+     
+
+
+    
+    
